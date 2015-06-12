@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+    <head><title>RestFul API TEST</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+
+            <h1>RESTFul API TEST</h1>
+            <p>Servicio de prueba RESTFul</p>
+
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Metodo</th>
+
+                        <th>Descripción</th>
+                        <th>Request</th>
+                        <th>Response</th>
+                        <th>Parametro (Ej.)</th>
+                        <th>Respuesta (Ej.)</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">api/test/word</th>
+                        <td>POST</td>
+
+                        <td>Recibe una palabra y responde esta en mayúsculas</td>
+                        <td>JSON</td>
+                        <td>JSON</td>
+                        <td><code>{ "data":  "hola" }</code> </td>
+                        <td><code>                        {
+                                "code": "00",
+                                "description": "OK",
+                                "data": "HOLA"
+                                }</code> </td>
+
+
+
+
+                    </tr>
+                    <tr>
+                        <!--
+                        2.- [GET] /time?value="hora"
+retorna: json
+Descripción: Toma la hora de value y la devuelve en formato UTC ISODATE
+Ej:
+retorna:
+{ "code":  "00", "description": "OK", "data": "UTC ISO DATE" } 
+Además debe manejar el código status HTTP 200 y 500, correctamente.
+
+                        -->
+                        <th scope="row">api/test/time</th>
+                        <td>GET</td>
+                        <td>Recive un valor hora y devuelve la hora en UTC ISOs</td>
+
+                        <td>TEXT (h:mm)</td>
+                        <td>JSON</td>
+                        <td><code>?value=12:00</code> </td>
+                        <td><code>                        {
+                                {
+                                "code": "00",
+                                "description": "OK",
+                                "data": "vie jun 12 04:00:00 UTC 2015"
+                                }</code> </td>
+
+
+                    </tr>
+                    <tr>
+                        <th scope="row">api/status</th>
+                        <td>GET</td>
+                        <td>Devuelve "Hola Mundo!! RESTful API"</td>
+
+                        <td>N/A</td>
+                        <td>TEXT</td>
+                        <td><code>N/A</code> </td>
+                        <td><code>Hola Mundo!! RESTful API</code> </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <th scope="row">api/status/version</th>
+                        <td>GET</td>
+                        <td>Devuelve Version de API</td>
+
+                        <td>N/A</td>
+                        <td>TEXT</td>
+                        <td><code>N/A</code> </td>
+                        <td><code>Version de la API: 0.1</code> </td>
+
+
+                    </tr>
+
+                <tbody>
+            </table>
+
+            <h4>Developed by Sebastián Araos 2015 / <a href="http://github.com/xhebyz">github.com/xhebyz</a></h4>
+
+        </div>
+
+    </body>
+
+
+
+</html>
